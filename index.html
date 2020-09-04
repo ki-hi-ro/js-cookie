@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="ページの内容を表す文章" />
+  <title>js-cookie</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+</head>
+
+<body>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-xl-5 col-lg-6 col-md-8 col-12 mx-auto">
+        <img src="assets/img/cookie.jpg" alt="Cookieの画像" class="img-fluid mx-auto d-block">
+
+        <input placeholder="設定したいCookieの名前" class="cookie-name border p-1 w-100 mt-3 mx-auto" required>
+        <div class="set set-name invalid-feedback">Cookieの名前を入力してください</div>
+
+        <input placeholder="上記で入力した名前に対する値" class="cookie-value border p-1 w-100 mt-3 mx-auto">
+        <div class="set set-value invalid-feedback">Cookieの値を入力してください</div>
+
+        <button type="submit" class="set-cookie-btn mt-3 btn btn-light">Cookieを設定する</button>
+
+        <button type="button" class="mt-3 btn btn-primary text-white all-cookie-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
+            全てのCookieを表示する
+        </button>
+
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">全てのCookie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="all-cookie-output text-overflow-x"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <input placeholder="削除したいCookieの名前" class="remove-cookie-name border p-1 w-100 mt-3 mx-auto">
+      <div class="remove invalid-feedback">削除したいCookieの名前を入力してください</div>
+
+      <button type="submit" class="remove-cookie-btn mt-3 btn btn-light">Cookieを削除する</button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/js/cookie.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
